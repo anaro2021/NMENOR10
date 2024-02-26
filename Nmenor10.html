@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero < 10</title>
+    <style>
+    #display {
+        border: solid blue 2px;
+    }
+    </style>
+</head>
+<body>
+    <h1>Pedir tres numeros</h1>
+    
+    <label for="n1">Numero 1</label>
+    <input type="number" id="n1">
+    <label for="n2">Numero 2</label>
+    <input type="number" id="n2">
+    <label for="n3">Numero 3</label>
+    <input type="number" id="n3">
+    <div id="display"></div>
+    <button onclick="PideNumerosFormulario()">
+        Calcular si hay num menor de 10
+    </button>
+    <div id="display"></div>
+    
+    <script>
+        
+        function PideNumerosFormulario() {
+            let n1 = document.getElementById("n1").value;        
+            let n2 = document.getElementById("n2").value;
+            let n3 = document.getElementById("n3").value;
+            let display = document.getElementById("display");
+            display.innerHTML = "<h1>" + numeroAtexto(n1, n2, n3 ) + "</h1>";
+        }      
+
+        function numeroAtexto(n1, n2, n3) {
+
+            if (n1 < 10 || n2 <10 || n3 <10){
+                 return "Alguno de los numeros es menor de diez";
+            } else{
+                return "Todos los numeros son mayores o igualesa diez";
+            }           
+         }
+                
+              
+    </script>
+</body>
+</html>
